@@ -29,10 +29,9 @@ assert adjacent(123789) == False
 res = [i for i in range(158126, 624574 + 1) if increasing(i) and adjacent(i)]
 print(len(res))
 
-
 # Task 2
-
 from collections import Counter
+
 
 def larger_group(pw: int) -> bool:
     c = Counter(str(pw))
@@ -42,6 +41,7 @@ def larger_group(pw: int) -> bool:
     #         return True
     # return False
     return any(amount == 2 for amount in c.values())
+
 
 assert larger_group(123444) == False
 assert larger_group(111122) == True
